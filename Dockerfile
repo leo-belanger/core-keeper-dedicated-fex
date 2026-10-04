@@ -20,7 +20,7 @@ RUN echo "Refreshing FEX packages: ${APT_REFRESH_NONCE}" \
        tzdata gosu jo jq gettext-base unzip wget libdbus-1-3 libxcursor1 \
        libxinerama1 libxss1 libgl1-mesa-dri libglx-mesa0 libegl1 libvulkan1 \
     && add-apt-repository -y ppa:fex-emu/fex \
-    && apt-get update && apt-get install -y --no-install-recommends fex-emu-armv8.2 \
+    && apt-get update && apt-get install -y --no-install-recommends fex-emu-armv8.0 \
     && apt-get -o Dpkg::Options::="--force-confold" upgrade -y --with-new-pkgs \
     && rm -rf /var/lib/apt/lists/*
 COPY --from=rootfs /opt/fex-rootfs /opt/fex-rootfs

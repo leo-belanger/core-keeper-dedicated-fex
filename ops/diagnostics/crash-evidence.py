@@ -68,7 +68,7 @@ def snapshot(bundle):
         ('host.txt', ['uname', '-a']),
         ('kernel.log', ['journalctl', '-k', '--since', '-10min', '-n', '150', '--no-pager']),
         ('packages.txt', ['docker', 'exec', CONTAINER, 'dpkg-query', '-W']),
-        ('fex-version.txt', ['docker', 'exec', CONTAINER, 'dpkg-query', '-W', 'fex-emu-armv8.2']),
+        ('fex-version.txt', ['docker', 'exec', CONTAINER, 'dpkg-query', '-W', 'fex-emu-armv8.0']),
     ]:
         if filename == 'docker-tail.log':
             # Docker writes diagnostics to either stdout or stderr.
